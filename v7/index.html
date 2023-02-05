@@ -1,0 +1,208 @@
+
+<!--
+  Copying and subsequent publication of this page is prohibited. 
+  Modification, patches of this page are not permitted and are protected by copyright.
+  The original page is at deltav4.gitlab.io/v7/index.html
+  The author is not responsible for the actions of users of this page
+	© Alexander Lylko
+-->
+<html class="notranslate" translate="no">
+
+	<head>  
+		<meta name="google" content="notranslate" />
+		<title>Delta Agario</title>
+		<meta name="renderer-type" content="Canvas">
+		<meta name="description" content="An multiplayer game">
+		<meta name="keywords" content="agario, agar, io games, cell, cells, virus, bacteria arcade, blob, blobio, game, games, web game, html5, fun, flash, delta, delta agar, agar selffeed, crazy agar, multiplayer, html5, javascript, 2022 agar, dual agar, agar survival">
+		<meta name="theme-color" content="#000000"/>
+
+		<link id="dynamic-favicon" rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta property="og:title" content="Delta Agario"/>
+		<meta property="og:description" content="An multiplayer game"/>
+		<meta property="og:image" content="https://i.imgur.com/7cugADY.png"/>
+		<meta property="og:image:alt" content="An image of the Greek symbol delta, three times superimposed on a canvas filled with a purple hazy galaxy"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:site_name" content="Delta Agario"/>
+
+
+		<!-- <script src="https://cdn.lr-in.com/LogRocket.min.js" crossorigin="anonymous"></script>
+		<script>window.LogRocket && window.LogRocket.init('y0sblh/delta-v6');</script> -->
+
+
+		<link rel="stylesheet" crossorigin="anonymous" href="https://fonts.googleapis.com/css2
+			?family=Montserrat
+			&family=Ubuntu:wght@400;700
+			&family=Roboto:wght@400;700
+			&family=Oswald:wght@400;700
+			&family=Press+Start+2P
+			&family=Pacifico
+			&family=Titillium+Web
+			&family=Exo+2:wght@400;600
+			&family=Play:wght@400;700
+			&display=swap">
+
+
+
+		<link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/w3-css/4.1.0/w3.min.css">
+		<link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+		<link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap-grid.min.css">
+		<link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap-utilities.min.css">
+
+
+		<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<link crossorigin="anonymous" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+		<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+		
+		<link crossorigin="anonymous" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/css/iziModal.min.css"/>
+		<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.0/js/iziModal.min.js"></script>
+
+		<script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.4.1/parse.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.12.1/system.min.js"></script>
+		<!-- <script src="https://raw.githack.com/guerrerocarlos/CacheP2P/master/cachep2p.min.js" crossorigin="anonymous"></script> -->
+		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.10.3/css/OverlayScrollbars.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.10.3/js/OverlayScrollbars.min.js"></script> -->
+		<!-- <script type="text/javascript" src="./lib/ivank.js"></script> -->
+		<!-- <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> -->
+		<link rel="stylesheet" href="./assets/color-picker.css">
+		<link rel="stylesheet" href="./assets/icons.css">
+		<link rel="stylesheet" href="./assets/styles.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="./assets/hint.css"/>
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145106226-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){window.dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-145106226-2', { 'groups': 'shop' });
+		</script> -->
+	</head>
+<body>
+ 
+<!-- No source for you -->
+<!-- Menu -->
+<div class="overlays" id="overlays"></div>
+<!-- Canvas -->
+<div class="canvas-container"></div>
+<!-- Hud -->
+<div class="hud" id="overlays-hud"></div>
+
+
+
+
+
+<div id="captchaWindow" style><div id="verifyUser" style></div></div>
+<div id="captchaWindowV3" style="display:none;"></div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/pako@2.0.2/dist/pako.min.js"></script> -->
+
+<script src="./lib/vendors.js"></script>
+<script src="./lib/protobuf.js"></script>
+
+<script src="https://unpkg.com/wakelock-lazy-polyfill"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.11.0/simplepeer.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/preact@10.11.0/dist/preact.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prop-types@15.8.1/prop-types.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact@10.11.0/devtools/dist/devtools.umd.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/preact@10.11.0/debug/dist/debug.umd.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/preact@10.11.0/hooks/dist/hooks.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact@10.11.0/compat/dist/compat.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/htm/3.1.0/htm.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/preact-portal@1.1.3/dist/preact-portal.min.js"></script>
+
+
+<script type="module" charset="utf-8" src="./js/index.js?version=1"></script>
+<script src="./js/spectator.js"></script>
+
+
+<!--- THIRD PARTY PLUGINS--->
+<script>
+	window.dataLayer = window.dataLayer || [];
+	System.import('https://www.googletagmanager.com/gtag/js?id=UA-145106226-2').then(function() {
+		function gtag(){window.dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-145106226-2', { 'groups': 'shop' });
+	})
+
+
+
+
+	function getMobileOperatingSystem() {
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		// Windows Phone must come first because its UA also contains "Android"
+		if (/windows phone/i.test(userAgent)) {
+			return "Windows Phone";
+		}
+		if (/android/i.test(userAgent)) {
+			return "Android";
+		}
+		// iOS detection from: http://stackoverflow.com/a/9039885/177710
+		if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+			return "iOS";
+		}
+		return "unknown";
+	}
+	if(getMobileOperatingSystem()=="unknown"){
+		// document.getElementById('toggleFullScreen').style.display = 'none'
+	}
+	if(getMobileOperatingSystem()!=="unknown"){
+		document.write('<script charset="utf-8" src="./plugin/touch-control.js"><\/script>')
+	}
+
+
+	/*if(location.href.indexOf('legendbot')>-1){
+		document.write('<script charset="utf-8" src="./plugin/legendbot.js"><\/script>')
+	}*/
+</script>
+<!--- /THIRD PARTY --->
+<!-- <script type="text/javascript"> (function(){ var s =
+	document.createElement('script'); s.src =
+	document.location.protocol+'//static.ao.gl/js/analytics-min.js'; s.type =
+	'text/javascript'; s.async = true; var t =
+	document.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t); })();
+</script> -->
+<script>
+	function changeFavicon(src) {
+		var link = document.createElement('link'),
+			oldLink = document.getElementById('dynamic-favicon');
+		link.id = 'dynamic-favicon';
+		link.rel = 'shortcut icon';
+		link.href = src;
+		if (oldLink) document.head.removeChild(oldLink);
+		document.head.appendChild(link);
+	}
+	setTimeout(changeFavicon.bind(this, './assets/favicon.ico'), 2000)
+	setTimeout(changeFavicon.bind(this, './assets/favicon.ico'), 4000)
+
+
+	if ('serviceWorker' in navigator && location.origin === 'https://deltav4.gitlab.io') {
+	navigator.serviceWorker.register('service-worker.js')
+		.then(() => navigator.serviceWorker.ready.then((worker) => {
+			console.log('service worker 1',err)
+			worker.sync.register('syncdata');
+		}))
+		.catch((err) => console.log('service worker 2',err));
+	}
+
+	document.addEventListener("DOMContentLoaded", function(event) {
+		try{
+			AndroidFunction.gameLoading();
+		}catch(e){}
+	});
+</script>
+
+
+
+</body>
+
+</html>
